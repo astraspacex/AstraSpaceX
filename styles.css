@@ -567,6 +567,10 @@ footer p {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll;
+        background-position: center top;
+    }
     .nav-links {
         display: none;
         position: absolute;
