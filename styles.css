@@ -387,29 +387,6 @@ nav {
     gap: 2rem;
 }
 
-.value-card {
-    background: var(--card-bg);
-    padding: 2rem;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 165, 0, 0.2);
-    transition: all 0.3s ease;
-}
-
-.value-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(255, 165, 0, 0.15);
-}
-
-.value-card h4 {
-    color: var(--accent-gold);
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
-.value-card p {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-}
 
 /* Why Choose Us */
 .why-choose {
