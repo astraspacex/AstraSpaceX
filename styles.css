@@ -323,7 +323,13 @@ nav {
     padding: 80px 2rem;
     background: linear-gradient(135deg, rgba(0, 102, 255, 0.05) 0%, rgba(255, 165, 0, 0.05) 100%);
 }
+.mission-card {
+    background: url('images/mission-1050.jpg') center/cover no-repeat;
+}
 
+.vision-card {
+    background: url('images/vision-1050.jpg') center/cover no-repeat;
+}
 .mv-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
