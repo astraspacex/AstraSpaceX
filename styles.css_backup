@@ -326,7 +326,9 @@ nav {
 .mission-card {
     background: url('images/about/our_mission.png') center/cover no-repeat;
 }
-
+.vision-card {
+    background: url('images/about/our_vision.png') center/cover no-repeat;
+}
 .safety-card {
     background: url('images/about/safety_first.png') center/cover no-repeat;
 }
@@ -350,22 +352,45 @@ nav {
     margin: 0 auto;
 }
 
-.mv-card {
-    background: var(--card-bg);
-    padding: 2rem;
+.mv-card,
+.value-card {
+    position: relative;
+    overflow: hidden;
     border-radius: 15px;
     border: 1px solid rgba(0, 102, 255, 0.2);
+    padding: 2.5rem;
+    color: var(--text-primary);
+}
+
+/* dark overlay so text stays readable */
+.mv-card::before,
+.value-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 14, 39, 0.65);
+    z-index: 0;
 }
 
 .mv-card h3 {
-    color: var(--accent-gold);
-    font-size: 1.5rem;
+    color: var(--accent-gold);   /* orange */
+    font-size: 1.6rem;
     margin-bottom: 1rem;
+    font-weight: 700;
 }
-
 .mv-card p {
-    color: var(--text-secondary);
-    line-height: 1.8;
+    position: relative;
+    z-index: 1;
+}
+.value-card h4 {
+    color: var(--accent-gold);   /* orange */
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+.value-card p {
+    position: relative;
+    z-index: 1;
 }
 
 /* Values Grid */
@@ -375,29 +400,6 @@ nav {
     gap: 2rem;
 }
 
-.value-card {
-    background: var(--card-bg);
-    padding: 2rem;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 165, 0, 0.2);
-    transition: all 0.3s ease;
-}
-
-.value-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(255, 165, 0, 0.15);
-}
-
-.value-card h4 {
-    color: var(--accent-gold);
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
-.value-card p {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-}
 
 /* Why Choose Us */
 .why-choose {
@@ -519,9 +521,7 @@ nav {
 }
 
 .team-section-header {
-    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-gold) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--accent-gold);
     padding: 1.5rem;
     text-align: center;
     font-size: 1.3rem;
